@@ -1,4 +1,3 @@
-
 const dataTable = [
   {
     name: "name1",
@@ -18,34 +17,23 @@ const dataTable = [
   }
 ];
 
+let body = document.body,
+tbl = document.createElement("table");
+tbl.style.width = "100px";
+tbl.style.border = "1px solid black";
 
-const body = document.getElementsByTagName("body")[0];
-const tbl = document.createElement("table");
-tbl.style.width = "100%";
-tbl.setAttribute("border", "1");
-const tbdy = document.createElement("tbody");
-const thead = document.createElement("thead");
-thead.innerHTML = "dataTable";
+dataTable.forEach((obj) => {
+  let tr = tbl.insertRow();
 
-//Object.getOwnPropertyNames(dataTable[0]).forEach(prop => console.log(prop));  //for titles
-
-dataTable.forEach((obj, index, array) => {
-  const tr = document.createElement("tr");
-  
   createTd(obj.name);
   createTd(obj.value);
-  
-  tbdy.appendChild(tr);
 
-  function createTd(prop){
-    const td = document.createElement("td");
-    td.innerHTML = prop;
-    tr.appendChild(td);
+  body.appendChild(tbl);
+
+  function createTd(value) {
+    let td = tr.insertCell();
+    td.innerHTML = value;
+    td.style.border = "1px solid black";
   }
 });
-
- 
-
-tbl.appendChild(thead);
-tbl.appendChild(tbdy);
 body.appendChild(tbl);
