@@ -1,1 +1,14 @@
-
+{
+  "Admin": {
+    "number": 98,
+    "background":"lightpink",
+    "name": "Fedya",
+    "isAdmin": true
+  },
+  "User": {
+    "number": 10,
+    "background":"grey",
+    "name": "noName",
+    "isAdmin": false
+  }
+}
