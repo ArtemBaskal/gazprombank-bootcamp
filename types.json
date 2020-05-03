@@ -1,0 +1,14 @@
+{
+    "number": 123.456,
+    "string": "Hello GPB",
+    "boolean": true,
+    "object": {
+        "name": "Vasya",
+        "arr": [
+            0,
+            1,
+            2
+        ]
+    },
+    "null": null
+}
